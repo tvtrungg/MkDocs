@@ -1,0 +1,31 @@
+site_name: Tvtrung's Blog
+# nav:
+#   - Home: index.md
+#   - About: about.md
+#   - IaC: IaC.md
+theme:
+  name: material
+  palette:
+    primary: teal
+    accent: orange
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - content.code.copy # Thêm nút sao chép code
+    - content.tabs # Thêm tabs
+    - search.suggest # Thêm gợi ý tìm kiếm
+  favicon: img/logo.png
+  logo: img/logo.png
+plugins:
+  - minify # Tối ưu hóa tài nguyên
+  - awesome-pages # Tạo trang tự động
+  # - git-revision-date: # Hiển thị ngày commit gần nhất
+  #     date_format: '%Y-%m-%d'
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
