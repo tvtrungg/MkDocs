@@ -1,3 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/"/>
+    </url>
+    <url>
+        <loc>Noneabout/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneabout/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/about/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/about/"/>
+    </url>
+    <url>
+        <loc>Nonefr/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/"/>
+    </url>
+    <url>
+        <loc>Nonefr/about/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneabout/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/about/"/>
+    </url>
+    <url>
+        <loc>Nonevi/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/"/>
+    </url>
+    <url>
+        <loc>Nonevi/about/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneabout/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/about/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/IaC/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/IaC/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/Kubernetes/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/Kubernetes/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/Kubernetes/shorter/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/Kubernetes/shorter/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/Nginx/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/Nginx/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/Prometheus/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/Prometheus/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/ci-cd/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/ci-cd/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/fe-interview/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/fe-interview/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/mkdocs/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/mkdocs/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/mkdocs/setup/extensions/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/mkdocs/setup/extensions/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/mkdocs/setup/install/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/mkdocs/setup/install/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/mkdocs/setup/material_theme/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/mkdocs/setup/material_theme/"/>
+    </url>
+    <url>
+        <loc>Nonevi/blogs/mkdocs/setup/plugins/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/mkdocs/setup/plugins/"/>
+    </url>
 </urlset>
