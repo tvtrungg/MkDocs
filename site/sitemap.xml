@@ -1,123 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>None./</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/"/>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tvtrungg.github.io/MkDocs/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://tvtrungg.github.io/MkDocs/fr/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/"/>
     </url>
     <url>
-        <loc>Noneabout/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/about/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneabout/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/about/"/>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tvtrungg.github.io/MkDocs/about/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://tvtrungg.github.io/MkDocs/fr/about/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/about/"/>
     </url>
     <url>
-        <loc>Nonefr/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/fr/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://tvtrungg.github.io/MkDocs/fr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tvtrungg.github.io/MkDocs/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/"/>
     </url>
     <url>
-        <loc>Nonefr/about/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/fr/about/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/about/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneabout/"/>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/about/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://tvtrungg.github.io/MkDocs/fr/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tvtrungg.github.io/MkDocs/about/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/about/"/>
     </url>
     <url>
-        <loc>Nonevi/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tvtrungg.github.io/MkDocs/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://tvtrungg.github.io/MkDocs/fr/"/>
     </url>
     <url>
-        <loc>Nonevi/about/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/about/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/about/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneabout/"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="Nonefr/about/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tvtrungg.github.io/MkDocs/about/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://tvtrungg.github.io/MkDocs/fr/about/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/IaC/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/IaC/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/IaC/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/IaC/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/Kubernetes/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/Kubernetes/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/Kubernetes/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/Kubernetes/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/Kubernetes/shorter/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/Kubernetes/shorter/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/Kubernetes/shorter/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/Kubernetes/shorter/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/Nginx/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/Nginx/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/Nginx/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/Nginx/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/Prometheus/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/Prometheus/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/Prometheus/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/Prometheus/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/ci-cd/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/ci-cd/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/ci-cd/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/ci-cd/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/fe-interview/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/fe-interview/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/fe-interview/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/fe-interview/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/mkdocs/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/mkdocs/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/mkdocs/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/mkdocs/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/mkdocs/setup/extensions/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/mkdocs/setup/extensions/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/mkdocs/setup/extensions/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/mkdocs/setup/extensions/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/mkdocs/setup/install/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/mkdocs/setup/install/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/mkdocs/setup/install/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/mkdocs/setup/install/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/mkdocs/setup/material_theme/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/mkdocs/setup/material_theme/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/mkdocs/setup/material_theme/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/mkdocs/setup/material_theme/"/>
     </url>
     <url>
-        <loc>Nonevi/blogs/mkdocs/setup/plugins/</loc>
+        <loc>https://tvtrungg.github.io/MkDocs/vi/blogs/mkdocs/setup/plugins/</loc>
         <lastmod>2025-03-27</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="vi" href="Nonevi/blogs/mkdocs/setup/plugins/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://tvtrungg.github.io/MkDocs/vi/blogs/mkdocs/setup/plugins/"/>
     </url>
 </urlset>

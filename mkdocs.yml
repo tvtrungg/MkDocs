@@ -1,4 +1,6 @@
 site_name: Tvtrung's Blog
+site_url: https://tvtrungg.github.io/MkDocs
+
 theme:
   name: material
   language: en
