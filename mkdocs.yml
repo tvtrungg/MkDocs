@@ -1,10 +1,7 @@
 site_name: Tvtrung's Blog
-# nav:
-#   - Home: index.md
-#   - About: about.md
-#   - IaC: IaC.md
 theme:
   name: material
+  language: en
   palette:
     primary: teal
     accent: orange
@@ -15,17 +12,45 @@ theme:
     - content.code.copy # Thêm nút sao chép code
     - content.tabs # Thêm tabs
     - search.suggest # Thêm gợi ý tìm kiếm
+    - search.full # Thêm tìm kiếm toàn văn
   favicon: img/logo.png
   logo: img/logo.png
+
 plugins:
   - minify # Tối ưu hóa tài nguyên
   - awesome-pages # Tạo trang tự động
-  # - git-revision-date: # Hiển thị ngày commit gần nhất
-  #     date_format: '%Y-%m-%d'
-
+  - search
+  - i18n:
+      default_language: en
+      docs_structure: folder
+      reconfigure_material: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+        - locale: vi
+          name: Tiếng Việt
+          build: true
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - tables
   - toc:
       permalink: true
+copyright: Copyright &copy; 2024 Vinh Trung THIEU
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/tvtrungg
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/tvtrungg
+      name: LinkedIn
+    - icon: fontawesome/brands/mastodon
+      link: https://tvtrung.vercel.app/
+      name: Website

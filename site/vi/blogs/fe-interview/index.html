@@ -1,0 +1,3088 @@
+
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ci-cd/">
+      
+      
+        <link rel="next" href="../IaC/">
+      
+      
+      <link rel="icon" href="../../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Frontend Interview - Tvtrung's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#muc-luc" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href="../../" title="Tvtrung&#39;s Blog" class="md-header__button md-logo" aria-label="Tvtrung's Blog" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tvtrung's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Frontend Interview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Chọn ngôn ngữ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/fr/" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="vi" class="md-select__link">
+              Tiếng Việt
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Tìm kiếm" placeholder="Tìm kiếm" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Tìm kiếm">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Xoá" aria-label="Xoá" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Tvtrung&#39;s Blog" class="md-nav__button md-logo" aria-label="Tvtrung's Blog" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Tvtrung's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trang chủ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Giới thiệu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blogs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci-cd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI/CD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Frontend Interview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Frontend Interview
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Callback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-promise-co-tu-es6" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Promise - Có từ ES6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Promise - Có từ ES6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promise-pain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promise (pain)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promise-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promise (concept)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-jquery-ajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. JQuery Ajax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. XML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Regex
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-restful-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Restful API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Restful API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-restful-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Restful API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cac-thanh-phan" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Các thành phần
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-hoat-ong" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Hoạt động
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-authentication-va-du-lieu-tra-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Authentication và dữ liệu trả về
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-status-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Status code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6 Authorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. JWT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. JWT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-khai-niem" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Khái niệm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-cau-truc" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Cấu trúc
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Cấu trúc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Header
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Payload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. Signature
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-khi-nao-nen-dung-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Khi nào nên dùng JWT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-phan-biet-authentication-va-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Phân biệt Authentication và Authorization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Phân biệt Authentication và Authorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-cac-phuong-thuc-pho-bien-dung-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Các phương thức phổ biến dùng authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1 Các phương thức phổ biến dùng authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-basic-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Basic Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-bearer-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Bearer Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. API Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-oauth-20-open-voi-authentication-hoac-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      d. OAuth (2.0) - Open với Authentication hoặc Authorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-spa-va-mpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. SPA và MPA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. SPA và MPA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-spa-single-page-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 SPA - Single-Page Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-cach-trien-khai" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Cách triển khai
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-su-khac-biet" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Sự khác biệt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-so-sanh" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 So sánh
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-ssr-va-csr" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. SSR và CSR
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. SSR và CSR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-ssr-server-side-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 SSR (server side render):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-csr-client-side-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 CSR (Client side render):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-lazy-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Lazy loading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Lazy loading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-khai-niem" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 Khái niệm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-ung-dung" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 Ứng dụng
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-cac-ky-thuat-co-ban" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 Các kỹ thuật cơ bản
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lazysizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      LazySizes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-mo-hinh-mvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Mô hình MVC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-mo-hinh-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Mô hình MVP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-mo-hinh-mvvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Mô hình MVVM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-so-sanh-3-mo-hinh-mvc-mvp-mvvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. So sánh 3 mô hình MVC, MVP, MVVM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-local-storage-session-storage-va-cookie" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Local Storage, Session Storage và Cookie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Local Storage, Session Storage và Cookie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#giong-nhau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giống nhau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#khac-nhau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Khác nhau
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-khac-biet-giua-html-va-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Khác biệt giữa HTML và HTML5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-mot-so-cach-tang-performance-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Một số cách tăng Performance website
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-tieu-chuan-w3c" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Tiêu chuẩn W3C
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. Tiêu chuẩn W3C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loi-ich" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lợi ích
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mot-so-luu-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Một số lưu ý
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-so-sanh-javascript-es5-va-es6" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. So sánh Javascript ES5 và ES6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. So sánh Javascript ES5 và ES6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#giong-nhau_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giống nhau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#khac-nhau_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Khác nhau
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-array-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. Array Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21. Array Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foreach" class="md-nav__link">
+    <span class="md-ellipsis">
+      forEach()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#every-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      every() – bool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      some() - bool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    <span class="md-ellipsis">
+      find()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      filter()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      map()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      reduce()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concat" class="md-nav__link">
+    <span class="md-ellipsis">
+      concat()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      slice()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split" class="md-nav__link">
+    <span class="md-ellipsis">
+      split()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    <span class="md-ellipsis">
+      join()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IaC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IaC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kubernetes/shorter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bản tóm tắt ngắn gọn hơn về Kubernetes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mkdocs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Mkdocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs/setup/extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown Extensions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs/setup/install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hướng dẫn cài đặt MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs/setup/material_theme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Material Theme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs/setup/plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nginx
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prometheus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prometheus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-callback" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Callback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-promise-co-tu-es6" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Promise - Có từ ES6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Promise - Có từ ES6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promise-pain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promise (pain)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promise-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promise (concept)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-jquery-ajax" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. JQuery Ajax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. XML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Regex
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-restful-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Restful API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Restful API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-restful-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Restful API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cac-thanh-phan" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Các thành phần
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-hoat-ong" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Hoạt động
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-authentication-va-du-lieu-tra-ve" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 Authentication và dữ liệu trả về
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-status-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Status code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6 Authorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. JWT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. JWT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-khai-niem" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Khái niệm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-cau-truc" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Cấu trúc
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Cấu trúc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Header
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Payload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. Signature
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-khi-nao-nen-dung-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Khi nào nên dùng JWT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-phan-biet-authentication-va-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Phân biệt Authentication và Authorization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Phân biệt Authentication và Authorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-cac-phuong-thuc-pho-bien-dung-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Các phương thức phổ biến dùng authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1 Các phương thức phổ biến dùng authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-basic-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Basic Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-bearer-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Bearer Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. API Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-oauth-20-open-voi-authentication-hoac-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      d. OAuth (2.0) - Open với Authentication hoặc Authorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-spa-va-mpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. SPA và MPA
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. SPA và MPA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-spa-single-page-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 SPA - Single-Page Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-cach-trien-khai" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Cách triển khai
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-su-khac-biet" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Sự khác biệt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-so-sanh" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 So sánh
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-ssr-va-csr" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. SSR và CSR
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. SSR và CSR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-ssr-server-side-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 SSR (server side render):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-csr-client-side-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 CSR (Client side render):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-lazy-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Lazy loading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Lazy loading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-khai-niem" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 Khái niệm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-ung-dung" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 Ứng dụng
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-cac-ky-thuat-co-ban" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 Các kỹ thuật cơ bản
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lazysizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      LazySizes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-mo-hinh-mvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Mô hình MVC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-mo-hinh-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Mô hình MVP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-mo-hinh-mvvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Mô hình MVVM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-so-sanh-3-mo-hinh-mvc-mvp-mvvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. So sánh 3 mô hình MVC, MVP, MVVM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-local-storage-session-storage-va-cookie" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Local Storage, Session Storage và Cookie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Local Storage, Session Storage và Cookie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#giong-nhau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giống nhau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#khac-nhau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Khác nhau
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-khac-biet-giua-html-va-html5" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Khác biệt giữa HTML và HTML5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-mot-so-cach-tang-performance-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Một số cách tăng Performance website
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-tieu-chuan-w3c" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Tiêu chuẩn W3C
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. Tiêu chuẩn W3C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loi-ich" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lợi ích
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mot-so-luu-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Một số lưu ý
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-so-sanh-javascript-es5-va-es6" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. So sánh Javascript ES5 và ES6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. So sánh Javascript ES5 và ES6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#giong-nhau_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Giống nhau
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#khac-nhau_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Khác nhau
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-array-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. Array Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21. Array Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foreach" class="md-nav__link">
+    <span class="md-ellipsis">
+      forEach()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#every-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      every() – bool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      some() - bool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    <span class="md-ellipsis">
+      find()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      filter()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      map()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      reduce()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concat" class="md-nav__link">
+    <span class="md-ellipsis">
+      concat()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slice" class="md-nav__link">
+    <span class="md-ellipsis">
+      slice()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split" class="md-nav__link">
+    <span class="md-ellipsis">
+      split()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    <span class="md-ellipsis">
+      join()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="muc-luc">Mục lục<a class="headerlink" href="#muc-luc" title="Permanent link">&para;</a></h1>
+<h2 id="1-callback"><strong>1. Callback</strong><a class="headerlink" href="#1-callback" title="Permanent link">&para;</a></h2>
+<p>Là hàm được truyền qua đối số khi gọi hàm khác và được gọi lại trong hàm nhận đối số</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">myFunc</span><span class="p">(</span><span class="nx">param</span><span class="p">){</span>
+<span class="w">        </span><span class="nx">param</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">myCallBack</span><span class="p">(</span><span class="nx">value</span><span class="p">){</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">myFunc</span><span class="p">(</span><span class="nx">myCallBack</span><span class="p">);</span><span class="w">  </span><span class="o">--&gt;</span><span class="w"> </span><span class="nx">Hello</span>
+</code></pre></div>
+<h2 id="2-promise-co-tu-es6"><strong>2. Promise</strong> - Có từ ES6<a class="headerlink" href="#2-promise-co-tu-es6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>sync</strong> : đồng bộ --&gt; thằng nào viết trước thì chạy trước</li>
+</ul>
+<p>VD:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">2</span><span class="p">)</span>
+<span class="o">--&gt;</span><span class="w"> </span><span class="nx">In</span><span class="w"> </span><span class="nx">ra</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">trước</span><span class="w"> </span><span class="nx">và</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="nx">sau</span>
+</code></pre></div>
+<ul>
+<li><strong>async</strong>: bất đồng bộ (setTimeout, setInterval, fetch, xml, file reading, req animation)
+  <code>javascript
+    setTimeout(function(){
+        console.log(1);
+    ,1000});
+    console.log(2);
+    --&gt; In 2 trước và 1 sau</code>
+  ==&gt; Và để chúng ta biết các thao tác trên khi nào xong
+  thì JS cung cấp cho chúng ta Callback để xử lý.</li>
+<li>Tuy nhiên nó sẽ xảy ra vấn đề --&gt; Promise sinh ra để xử lý điều này</li>
+</ul>
+<h3 id="promise-pain"><strong>Promise (pain)</strong><a class="headerlink" href="#promise-pain" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Callback Hell</strong>
+  <img alt="Alt text" src="image.png" /></li>
+</ul>
+<p>--&gt; Các dữ liệu ràng buộc với nhau sinh ra callback hell</p>
+<h3 id="promise-concept"><strong>Promise (concept)</strong><a class="headerlink" href="#promise-concept" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">promise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="w"> </span><span class="c1">// Promise: Object Constructor</span>
+<span class="w">  </span><span class="c1">// Executor</span>
+<span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="nx">reject</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Logic</span>
+<span class="w">    </span><span class="c1">// Success --&gt; gọi resolve() và thất bại --&gt; reject()</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">);</span>
+
+<span class="nx">promise</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{})</span><span class="w"> </span><span class="c1">// Được gọi khi resolve() được gọi</span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{})</span><span class="w"> </span><span class="c1">// Được gọi khi reject() được gọi</span>
+<span class="w">  </span><span class="p">.</span><span class="k">finally</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{});</span><span class="w"> </span><span class="c1">// Đều được gọi</span>
+</code></pre></div>
+<ul>
+<li>
+<p>3 trạng thái của promise:</p>
+</li>
+<li>
+<p><strong>Pending</strong>: Trạng thái chờ thành công hay thất bại --&gt; nếu chạy hoài thì bị memory leak</p>
+</li>
+<li><strong>Fulfilled</strong>: Trạng thái thành công</li>
+<li>
+<p><strong>Rejected</strong>: Trạng thái thất bại</p>
+</li>
+<li>
+<p>Tính chất chuỗi</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">promise</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">})</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// data: 1 (nhận từ hàm 1)</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">  </span><span class="p">})</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// data: 2 (nhận từ hàm 2)</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="w">  </span><span class="p">})</span>
+<span class="w">  </span><span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{})</span><span class="w"> </span><span class="c1">// Được gọi khi reject() được gọi</span>
+<span class="w">  </span><span class="p">.</span><span class="k">finally</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{});</span><span class="w"> </span><span class="c1">// Đều được gọi</span>
+</code></pre></div>
+<h2 id="3-jquery-ajax"><strong>3. JQuery Ajax</strong><a class="headerlink" href="#3-jquery-ajax" title="Permanent link">&para;</a></h2>
+<ul>
+<li>AJAX - "Asynchronous JavaScript and XML" - là một bộ công cụ cho phép load dữ liệu từ server mà không yêu cầu tải lại trang. Nó sử dụng chức năng sẵn có XMLHttpRequest(XHR) của trình duyệt để thực hiện một yêu cầu đến server và xử lý dữ liệu server trả về.</li>
+<li>
+<p>jQuery cung cấp method <strong>$.ajax</strong> và một số methods tiện lợi giúp bạn làm việc với XHRs thông qua trình duyệt một cách dễ dàng hơn.</p>
+</li>
+<li>
+<p><code>a) Phương thức “load()”</code></p>
+<ul>
+<li>Cú pháp:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="nx">selector</span><span class="p">].</span><span class="nx">load</span><span class="p">(</span><span class="nx">URL</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nx">data</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="nx">callback</span><span class="p">]);</span>
+</code></pre></div>
+<ul>
+<li>Ví dụ:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#driver&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+<span class="w">            </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#stage&#39;</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;./result.html&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="p">});</span>
+
+<span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;stage&quot;</span><span class="o">&gt;</span><span class="nx">STAGE</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">input</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">&quot;button&quot;</span><span class="w"> </span><span class="nx">id</span><span class="o">=</span><span class="s2">&quot;driver&quot;</span><span class="w"> </span><span class="nx">value</span><span class="o">=</span><span class="s2">&quot;Load Data&quot;</span><span class="w"> </span><span class="o">/&gt;</span>
+</code></pre></div>
+<p>--&gt; Hàm load() khởi tạo một AJAX request tới URL file đã xác định là ./result.html. Sau khi tải file này, tất cả nội dung sẽ được đưa đến vào trong phần tử được tag với ID là stage.</p>
+</li>
+<li>
+<p><code>b) Phương thức “get()” và “post()”</code></p>
+<ul>
+<li>get()</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#load-du-lieu&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;vidu1.html&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">ketqua</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#noidung&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">ketqua</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#noidung&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#chuoi-can-lay&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">());</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<ul>
+<li>post()</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#load-du-lieu&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+<span class="w">      </span><span class="s2">&quot;vidu2.php&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;content abc&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;content bcd&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">ketqua</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#noidung&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">ketqua</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>c) Phương thức “ajax()”</code></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#load-du-lieu&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;vidu2.php&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">dataType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;html&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;content abc&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;content bcd&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">}).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">ketqua</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#noidung&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">ketqua</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Đối số đầu tiên chúng ta truyền vào cho phương thức “ ajax() ” chính là một đối tượng (Object) gồm các thuộc tính cấu hình để kĩ thuật AJAX của chúng ta có thể thực thi. Trong đó:</p>
+<ul>
+<li><strong>url</strong> : chuỗi chứa đường dẫn tới file cần lấy và trả về dữ liệu</li>
+<li><strong>type</strong> : phương thức gửi đi tương tự như của <code>&lt;form&gt;</code>, mặc định là “GET” nếu như các bạn không truyền vào.</li>
+<li><strong>dataType</strong> : xác định dữ liệu trả về thuộc dạng nào? Nếu các bạn không truyền thì jQuery tự động nhận biết kiểu dữ liệu (script, html, json…). Tuy nhiên, tôi khuyến cáo các bạn nên truyền vào đầy đủ để nhận dữ liệu chính xác nhất. Và thông dụng nhất chính là “html”.</li>
+<li><strong>data</strong> : truyền dữ liệu sang đường dẫn chỉ định để thực hiện xử lý và trả về dữ liệu. Tương tự như cách truyền dữ liệu của phương thức “ post() ”.</li>
+<li><strong>“done()”</strong> : ở loạt các bài viết hướng dẫn các bài viết về kĩ thuật Ajax với phương thức “ ajax() ” trước đây trên Internet. Thay vì dùng “done()” chúng ta sẽ dùng thuộc tính “success” trong đối tượng truyền vào “ ajax() ” nhưng từ các phiên bản mới hơn của jQuery. Họ khuyến cáo chúng ta nên sử dụng các phương thức như “ done() , fail() , always() ” (Tương ứng: Hoàn thành, thất bại và luôn luôn thực hiện). Nên tùy vào nhu cầu mà bạn xài phương thức tương ứng. Và nên nhớ là đi kèm với phương thức “ ajax() ” hoặc lưu vào một tên biến rồi dùng sau để nhận kết quả trả về.</li>
+</ul>
+<h2 id="4-xml"><strong>4. XML</strong><a class="headerlink" href="#4-xml" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Trong lập trình ứng dụng web, XML được sử dụng nhiều nhất là xây dựng các API Service. Các API sẽ trả kết quả về dạng XML hoặc JSON để các hệ thống khác có thể nói nói chuyện với nhau được. Hiện nay tuy JSON được sử dụng phổ biến hơn, nhưng XML cũng vẫn đang được dùng bởi nhiều hệ thống lớn.</p>
+</li>
+<li>
+<p>XML là gì?</p>
+</li>
+<li>
+<p>XML là từ viết tắt của từ Extensible Markup Language là ngôn ngữ đánh dấu mở rộng. XML có chức năng truyền dữ liệu và mô tả nhiều loại dữ liệu khác nhau. Tác dụng chính của XML là đơn giản hóa việc chia sẻ dữ liệu giữa các nền tảng và các hệ thống được kết nối thông qua mạng Internet.</p>
+</li>
+<li>
+<p>XML dùng để cấu trúc, lưu trữ và trong trao đổi dữ liệu giữa các ứng dụng và lưu trữ dữ liệu. Ví dụ khi ta xây dựng một ứng dụng bằng Php và một ứng dụng bằng Java thì hai ngôn ngữ này không thể hiểu nhau, vì vậy ta sẽ sử dụng XML để trao đổi dữ liệu. Chính vì vậy, XML có tác dụng rất lớn trong việc chia sẻ, trao đổi dữ liệu giữa các hệ thống.</p>
+</li>
+</ul>
+<h2 id="5-regex"><strong>5. Regex</strong><a class="headerlink" href="#5-regex" title="Permanent link">&para;</a></h2>
+<p><img alt="Alt text" src="image-1.png" /></p>
+<p>Ví dụ</p>
+<ul>
+<li>Phương thức exec được dùng để tìm chuỗi phù hợp theo mẫu so khớp.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myRe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/d(b+)d/g</span><span class="p">;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myRe</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">&quot;cdbbdbsbz&quot;</span><span class="p">);</span>
+
+<span class="nx">hoặc</span><span class="p">;</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/d(b+)d/g</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">&quot;cdbbdbsbz&quot;</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li>Nếu bạn muốn khởi tạo một biểu thức chính quy từ một chuỗi:
+  <div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">myRe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">RegExp</span><span class="p">(</span><span class="s2">&quot;d(b+)d&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;g&quot;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">myRe</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s2">&quot;cdbbdbsbz&quot;</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<h2 id="6-restful-api"><strong>6. Restful API</strong><a class="headerlink" href="#6-restful-api" title="Permanent link">&para;</a></h2>
+<h3 id="61-restful-api"><strong>6.1 Restful API</strong><a class="headerlink" href="#61-restful-api" title="Permanent link">&para;</a></h3>
+<ul>
+<li>RESTful API là một tiêu chuẩn dùng trong việc thiết kế API cho các ứng dụng web (thiết kế Web services) để tiện cho việc quản lý các resource</li>
+</ul>
+<h3 id="62-cac-thanh-phan"><strong>6.2 Các thành phần</strong><a class="headerlink" href="#62-cac-thanh-phan" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>API</strong> (Application Programming Interface) là một tập hợp các quy tắc và cơ chế cho phép các ứng dụng hoặc thành phần khác tương tác với nhau. API có thể trả về dữ liệu dạng JSON hoặc XML để ứng dụng của bạn sử dụng.</li>
+<li>
+<p><strong>REST</strong> (REpresentational State Transfer) là một kiểu kiến trúc API sử dụng phương thức HTTP để giao tiếp giữa các máy tính. Thay vì sử dụng URL để xử lý thông tin người dùng, REST sử dụng các yêu cầu HTTP như GET, POST, DELETE để thao tác dữ liệu.</p>
+</li>
+<li>
+<p><strong>Chức năng quan trọng nhất</strong> của REST là quy định cách sử dụng các HTTP method (như GET, POST, PUT, DELETE…) và cách định dạng các URL cho ứng dụng web để quản các resource. RESTful không quy định logic code ứng dụng và không giới hạn bởi ngôn ngữ lập trình ứng dụng, bất kỳ ngôn ngữ hoặc framework nào cũng có thể sử dụng để thiết kế một RESTful API.</p>
+</li>
+</ul>
+<h3 id="63-hoat-ong"><strong>6.3 Hoạt động</strong><a class="headerlink" href="#63-hoat-ong" title="Permanent link">&para;</a></h3>
+<p>REST hoạt động chủ yếu dựa vào giao thức HTTP. Các hoạt động cơ bản nêu trên sẽ sử dụng những phương thức HTTP riêng.</p>
+<ul>
+<li>GET (SELECT): Trả về một Resource hoặc một danh sách Resource.</li>
+<li>POST (CREATE): Tạo mới một Resource.</li>
+<li>PUT (UPDATE): Cập nhật thông tin cho Resource.</li>
+<li>PATCH (tương tự PUT): Được dùng để thay đổi data, nhưng nó chỉ thay đổi những field được yêu cầu thay đổi thay vì toàn bộ resource.</li>
+<li>DELETE (DELETE): Xoá một Resource.</li>
+</ul>
+<h3 id="64-authentication-va-du-lieu-tra-ve"><strong>6.4 Authentication và dữ liệu trả về</strong><a class="headerlink" href="#64-authentication-va-du-lieu-tra-ve" title="Permanent link">&para;</a></h3>
+<p>RESTful API không sử dụng session và cookie, nó sử dụng một access_token với mỗi request. Dữ liệu trả về thường có cấu trúc như sau:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TopDev&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="65-status-code"><strong>6.5 Status code</strong><a class="headerlink" href="#65-status-code" title="Permanent link">&para;</a></h3>
+<ul>
+<li>2xx - Thành công</li>
+<li>200 - Trả về thành công cho các method</li>
+<li>3xx - Điều hướng lại hoặc ko thay đổi</li>
+<li>304 - Not Modified – Client có thể sử dụng dữ liệu cache.</li>
+<li>4xx - lỗi client</li>
+<li>400 - Request không hợp lệ</li>
+<li>404 - Not Found</li>
+<li>5xx - lỗi server</li>
+</ul>
+<h3 id="66-authorization"><strong>6.6 Authorization</strong><a class="headerlink" href="#66-authorization" title="Permanent link">&para;</a></h3>
+<p>Hiện tại có 3 cơ chế Authorize chính:</p>
+<ul>
+<li>HTTP Basic</li>
+<li><a href="#1-callback">JSON Web Token (JWT)</a></li>
+<li>OAuth2</li>
+</ul>
+<h2 id="7-jwt"><strong>7. JWT</strong><a class="headerlink" href="#7-jwt" title="Permanent link">&para;</a></h2>
+<h3 id="71-khai-niem"><strong>7.1 Khái niệm</strong><a class="headerlink" href="#71-khai-niem" title="Permanent link">&para;</a></h3>
+<p>JWT (JSON Web Token) là một phương tiện đại diện cho các yêu cầu chuyển giao giữa hai bên Client – Server , các thông tin trong chuỗi JWT được định dạng bằng JSON.</p>
+<p><img alt="Alt text" src="image-2.png" /></p>
+<h3 id="72-cau-truc"><strong>7.2 Cấu trúc</strong><a class="headerlink" href="#72-cau-truc" title="Permanent link">&para;</a></h3>
+<p>Gồm 3 phần, được ngăn cách nhau bởi dấu chấm (.):</p>
+<h4 id="a-header"><strong>a. Header</strong><a class="headerlink" href="#a-header" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Phần header sẽ chứa kiểu dữ liệu , và thuật toán sử dụng để mã hóa ra chuỗi JWT</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;typ&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JWT&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;alg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HS256&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>“typ” (type)</strong> chỉ ra rằng đối tượng là một <strong>JWT</strong></li>
+<li><strong>“alg” (algorithm)</strong> xác định thuật toán mã hóa cho chuỗi là <strong>HS256</strong></li>
+</ul>
+<h4 id="b-payload"><strong>b. Payload</strong><a class="headerlink" href="#b-payload" title="Permanent link">&para;</a></h4>
+<p>Phần payload sẽ chứa các thông tin mình muốn đặt trong chuỗi Token như username , userId , author , … ví dụ:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;user_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1513717410&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;authorities&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADMIN_USER&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;jti&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;474cb37f-2c9c-44e4-8f5c-1ea5e4cc4d18&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="c-signature"><strong>c. Signature</strong><a class="headerlink" href="#c-signature" title="Permanent link">&para;</a></h4>
+<p>Phần chử ký này sẽ được tạo ra bằng cách mã hóa phần header , payload kèm theo một chuỗi secret (khóa bí mật) , ví dụ:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">base64urlEncode</span><span class="p">(</span><span class="nx">header</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">base64urlEncode</span><span class="p">(</span><span class="nx">payload</span><span class="p">);</span>
+<span class="nx">signature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Hash</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">secret</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li><strong>base64UrlEncoder</strong> : thuật toán mã hóa header và payload</li>
+</ul>
+<p>Đoạn code trên sau khi mã hóa header và payload bằng thuật toán base64UrlEncode ta sẽ có chuỗi như sau</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// header</span>
+<span class="nx">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span><span class="p">;</span>
+
+<span class="c1">// payload</span>
+<span class="nx">eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNTEzNzE</span><span class="p">;</span>
+</code></pre></div>
+<p>Sau đó mã hóa 2 chuỗi trên kèm theo secret (khóa bí mật) bằng thuật toán HS256 ta sẽ có chuỗi signature như sau:</p>
+<div class="highlight"><pre><span></span><code>9nRhBWiRoryc8fV5xRpTmw9iyJ6EM7WTGTjvCM1e36Q
+</code></pre></div>
+<h3 id="73-khi-nao-nen-dung-jwt"><strong>7.3 Khi nào nên dùng JWT</strong><a class="headerlink" href="#73-khi-nao-nen-dung-jwt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Authentication: Đây là trường hợp phổ biến nhất thường sử dụng JWT. Khi người dùng đã đăng nhập vào hệ thống thì những request tiếp theo từ phía người dùng sẽ chứa thêm mã JWT. Điều này cho phép người dùng được cấp quyền truy cập vào các url, service, và resource mà mã Token đó cho phép. Phương pháp này không bị ảnh hưởng bởi Cross-Origin Resource Sharing (CORS) do nó không sử dụng cookie.</p>
+</li>
+<li>
+<p>Trao đổi thông tin: JSON Web Token là 1 cách thức khá hay để truyền thông tin an toàn giữa các thành viên với nhau, nhờ vào phần signature của nó. Phía người nhận có thể biết được người gửi là ai thông qua phần signature. Và chữ ký được tạo ra bằng việc kết hợp cả phần header, payload lại nên thông qua đó ta có thể xác nhận được chữ ký có bị giả mạo hay không.</p>
+</li>
+</ul>
+<h2 id="8-phan-biet-authentication-va-authorization"><strong>8. Phân biệt Authentication và Authorization</strong><a class="headerlink" href="#8-phan-biet-authentication-va-authorization" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Authentication (xác thực người dùng)</li>
+<li>Authorization (các quyền của người dùng)
+  <img alt="Alt text" src="image-3.png" /></li>
+</ul>
+<h3 id="81-cac-phuong-thuc-pho-bien-dung-authentication"><strong>8.1 Các phương thức phổ biến dùng authentication</strong><a class="headerlink" href="#81-cac-phuong-thuc-pho-bien-dung-authentication" title="Permanent link">&para;</a></h3>
+<h4 id="a-basic-authentication"><strong>a. Basic Authentication</strong><a class="headerlink" href="#a-basic-authentication" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Đây là phương thức xác thực <strong>ít được khuyến khích</strong> bởi tình bảo mật của nó không an toàn.</li>
+<li>Dễ thực hiện</li>
+<li>Người gửi (sender) sẽ gửi username, password của mình trong <em>header</em> của request. Username và password phải được mã hóa dưới dạng Base64 để đảm bảo tính an toàn hơn.</li>
+<li>Với phương thức này <em>có thể không cần yêu cầu</em> về cookies, session ID... bởi vì chỉ cần sử dụng với http header, không cần đến hỗ trợ từ response khác.
+  <div class="highlight"><pre><span></span><code><span class="nx">Authorization</span><span class="o">:</span><span class="w"> </span><span class="nx">Basic</span><span class="w"> </span><span class="nx">bG9sOnNlY3VyZQ</span><span class="o">==</span>
+</code></pre></div></li>
+</ul>
+<h4 id="b-bearer-authentication"><strong>b. Bearer Authentication</strong><a class="headerlink" href="#b-bearer-authentication" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Còn được gọi là token authentication</li>
+<li>Có thể hiểu đơn giản là "cấp quyền truy cập cho người mang (bearer) token này".</li>
+<li>Bearer token sẽ cho phép truy cập đến một số tài nguyên hoặc url nhất định và thường là một chuỗi string được mã hóa, được sinh ra bởi server trong response để thực hiện request login.</li>
+<li>
+<p>Khi thực hiện bằng phương thức này thì client phải gửi bearer token này trong header để thực hiện request
+  <code>javascript
+    Authorization: Bearer &lt;token&gt;</code>
+  <strong>- Quá trình:</strong></p>
+</li>
+<li>
+<p>User gửi request -&gt; server để lấy một token bằng username, password thông qua SSL, server sẽ trả về một chuỗi access token.</p>
+</li>
+<li>Access token này chính là bearer token mà client cần phải gửi vào header nếu muốn thực hiện các request khác để server xác thực user đó là đúng.</li>
+<li>Token này có thể là một chuỗi mã hóa với các thuộc tính của user, vai trò của user đó.</li>
+<li>Khi server nhận được token này, sẽ giải mã sau đó sẽ thực hiện validate request đó trong ứng dụng xem user có được quyền thực hiện request đó hay không.</li>
+<li>Token này thường sẽ có hạn (ví dụ: 30 phút sau khi lấy sẽ hết hạn) bởi vì có thể role của user sẽ thay đổi trong quá trình thực hiện. Sẽ có trường hợp ví dụ user đang có role="Admin" chuyển thành "User".</li>
+<li>Nếu token không hết hạn thì token cũ với role="Admin" vẫn có quyền truy cập với role đó mặc dù đã bị thay đổi.</li>
+</ul>
+<h4 id="c-api-keys"><strong>c. API Keys</strong><a class="headerlink" href="#c-api-keys" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Được tạo ra để khắc phục những vấn đề của basic authentication.</li>
+<li>Trong phương thức này, một giá trị key duy nhất sinh (unique key) ra và gán cho user trong lần đầu tiên, biểu thị rằng user đó được xác định.</li>
+<li>Khi user quay trở lại hệ thống, unique key được sử dụng để chứng minh rằng user là giống với lần đầu tiên.</li>
+</ul>
+<h4 id="d-oauth-20-open-voi-authentication-hoac-authorization"><strong>d. OAuth (2.0)</strong> - Open với Authentication hoặc Authorization<a class="headerlink" href="#d-oauth-20-open-voi-authentication-hoac-authorization" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Ra đời nhằm giải quyết các vấn đề trên và xa hơn nữa, đây là một phương thức chứng thực giúp các ứng dụng có thể chia sẻ tài nguyên với nhau mà không cần chia sẻ thông tin username và password. - OAuth bao gồm bốn vai trò khác nhau: - <strong>Resource Server</strong>: REST API là một ví dụ, một máy chủ HTTP nơi người dùng có thể tạo, sửa đổi hoặc xóa các bản ghi, tài liệu hoặc tệp.</p>
+<ul>
+<li>
+<p><strong>Resource Owner</strong>:</p>
+<ul>
+<li>Duy trì <em>quyền sở hữu tài nguyên</em> mà người dùng đã tạo hoặc sửa đổi trên máy chủ</li>
+<li><em>Quyền truy cập hạn chế</em> của bên thứ 3 vào tài khoản của người dùng, dựa trên phạm vi của phạm vi của ủy quyền được cấp.</li>
+</ul>
+</li>
+<li>
+<p><strong>Client</strong>:</p>
+<ul>
+<li>Ứng dụng bên thứ 3 muốn truy cập vào tài khoản người dùng. <br>
+--&gt; Bắt buộc máy chủ resource/authorization và chủ sở hữu tài nguyên phải <strong>ủy quyền</strong> cho yêu cầu đó.</li>
+<li>Mọi khách hàng phải được đăng ký với máy chủ authorization và sẽ được cung cấp thông tin xác thực duy nhất của riêng mình (client_id và client_secret).</li>
+</ul>
+</li>
+<li>
+<p><strong>Authorization Server</strong> (thường là giống Resource Server): Đôi khi, ta có thể muốn rút ra khỏi máy chủ authorization từ máy chủ resource và triển khai nó như một phiên bản chuyên dụng, đặc biệt là trong các môi trường phân tán.</p>
+</li>
+<li>
+<p><strong>Ví dụ:</strong><br></p>
+<ul>
+<li>Khi ta đăng nhập bằng Facebook hay Gmail, website sẽ dẫn ta đến trang (hoặc phần mềm) Facebook và liệt kê những quyền mà nó cần phải có để cho phép bạn đăng nhập và sử dụng dịch vụ.</li>
+<li>Nếu ta <em>đồng ý</em> thì lúc này Facebook sẽ phát cho website một cái token(chứa một số quyền hạn nhất định giúp cho website có thể xác minh chúng ta là ai cũng như giúp cho website có thể hoạt động được).</li>
+<li>Nếu website này bị hacker tấn công thì nó chỉ lấy được thông tin hay hoạt động của ta trên website đó mà không ảnh hưởng đến những website khác đang sử dụng.</li>
+</ul>
+</li>
+</ul>
+<p>`--&gt; Do đó cách đăng nhập bằng phương thức OAuth này rất an toàn cho người dùng cuối như chúng ta.</p>
+</li>
+</ul>
+<p>`</p>
+<h2 id="9-spa-va-mpa"><strong>9. SPA và MPA</strong><a class="headerlink" href="#9-spa-va-mpa" title="Permanent link">&para;</a></h2>
+<h3 id="91-spa-single-page-application"><strong>9.1 SPA - Single-Page Application</strong><a class="headerlink" href="#91-spa-single-page-application" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ReactJS là 1 trong những thư viện tạo ra SPA</li>
+<li>Các "ông lớn" sử dụng SPA : Google, Facebook, Twitter</li>
+<li>Các SPA khác : F8, Shoppe, 30shine, chotot, zingmp3</li>
+<li>Single-Page đang nói đến kiến trúc phía bên dưới, chứ không phải là Web 1 trang dưới mắt nhìn người dùng</li>
+</ul>
+<h3 id="92-cach-trien-khai"><strong>9.2 Cách triển khai</strong><a class="headerlink" href="#92-cach-trien-khai" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SPA - Single-Page Application -&gt; CSR --&gt; Client side rendering</li>
+<li>MPA - Multi-Page Application -&gt; SSR --&gt; Server side rendering</li>
+</ul>
+<h3 id="93-su-khac-biet"><strong>9.3 Sự khác biệt</strong><a class="headerlink" href="#93-su-khac-biet" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>SPA :</p>
+</li>
+<li>
+<p>Được cho là cách tiếp cận hiện đại hơn</p>
+</li>
+<li>
+<p>Không yêu cầu tải lại trang trong quá trình sử dụng</p>
+</li>
+<li>
+<p>MPA:</p>
+</li>
+<li>Cổ điển</li>
+<li>Tải lại trang trong QT sử dụng (click vô đường link, chuyển sang,...)</li>
+<li>Thường dùng php, nodejs,...</li>
+</ul>
+<h3 id="94-so-sanh"><strong>9.4 So sánh</strong><a class="headerlink" href="#94-so-sanh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tốc độ</li>
+<li>SPA nhanh hơn khi sử dụng<ul>
+<li>Phần lớn tài nguyên được tải trong lần đầu (Có thể chậm hơn lần đầu)</li>
+<li>Trang chỉ tải thêm dữ liệu mới khi cần</li>
+</ul>
+</li>
+<li>MPA chậm hơn khi sử dụng<ul>
+<li>Luôn tải lại toàn bộ trang khi truy cập và chuyển hướng</li>
+</ul>
+</li>
+<li>Bóc tách</li>
+<li>SPA có phần Front-end riêng biệt</li>
+<li>MPA Front-end &amp; Back-end phụ thuộc nhau nhiều hơn, được đặt trong cùng 1 dự án</li>
+<li>Mô hình MVC (controller, views,...)</li>
+<li>
+<p>SEO (Search Engine Optimization - Tối ưu hóa công cụ tìm kiếm)</p>
+</li>
+<li>
+<p>SPA không thân thiện với SEO như MPA</p>
+</li>
+<li>
+<p>Trải nghiệm trên thiết bị di động tốt hơn</p>
+</li>
+<li>
+<p>UX (User Experience)</p>
+</li>
+<li>
+<p>SPA cho trải nghiệm tốt hơn, nhất là các theo tác chuyển trang</p>
+</li>
+<li>
+<p>Trải nghiệm trên thiết bị di động tốt hơn</p>
+</li>
+<li>
+<p>Quá trình phát triển</p>
+</li>
+<li>SPA dễ dàng tái sử dụng code (component)</li>
+<li>SPA bóc tách FE &amp; BE<ul>
+<li>Chia team phát triển song song</li>
+<li>Phát triển thêm mobile app dễ dàng 14</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-ssr-va-csr"><strong>10. SSR và CSR</strong><a class="headerlink" href="#10-ssr-va-csr" title="Permanent link">&para;</a></h2>
+<h3 id="101-ssr-server-side-render"><strong>10.1 SSR (server side render):</strong><a class="headerlink" href="#101-ssr-server-side-render" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Request các API để trả về từ server -&gt; Sau đó trình duyệt render ra</li>
+<li>Ưu điểm:</li>
+<li>tốt cho seo, tăng thứ hạng cho website (dantri, tintuc,...)</li>
+<li>Request đầu tiên đa phần sẽ nhanh hơn</li>
+<li>Phát triển ứng dụng nhanh hơn SSR (các ứng dụng nhỏ)</li>
+<li>Khuyết điểm:</li>
+<li>Reload cả trang khi chuyển hướng</li>
+</ul>
+<h3 id="102-csr-client-side-render"><strong>10.2 CSR (Client side render):</strong><a class="headerlink" href="#102-csr-client-side-render" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Vẫn có 1 chút SSR (render thẻ div trống <code>&lt;main&gt;</code>)</li>
+<li>Bên client sẽ đọc các file js rồi render ra (trình duyệt phải bật chức năng js, nếu tắt đi --&gt; die)</li>
+<li>Như Reactjs (chuyển trang ko cần load lại full trang)</li>
+<li>Ưu điểm:</li>
+<li>Chuyển trang mượt mà (ko cần reload cả trang)</li>
+<li>Khuyết yếu:</li>
+<li>Request đầu tiên sẽ chậm hơn</li>
+<li>Không đọc được nội dung trang tin tức, ko mang tính seo (các trang thời sự, tin tức sẽ ko dùng CSR)</li>
+</ul>
+<h2 id="11-lazy-loading"><strong>11. Lazy loading</strong><a class="headerlink" href="#11-lazy-loading" title="Permanent link">&para;</a></h2>
+<h3 id="111-khai-niem"><strong>11.1 Khái niệm</strong><a class="headerlink" href="#111-khai-niem" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Là 1 kĩ thuật tối ưu khi làm web, thay vì tải toàn bộ trang web và render ngay từ đầu, kỹ thuật này cho phép tải ngay các thành phần cần thiết để hiển thị tới người dùng và trì hoãn các tài nguyên còn lại cho đến khi cần.</li>
+<li>Ưu điểm: Tối ưu hiệu suất web, đỡ tốn tài nguyên, băng thông,...</li>
+</ul>
+<h3 id="112-ung-dung"><strong>11.2 Ứng dụng</strong><a class="headerlink" href="#112-ung-dung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Được sử dụng rộng rãi nhất trong lập trình, thiết kế website.</li>
+<li>WordPress cung cấp một giải pháp dựa trên Lazy Loading mang tên Infinite Scroll, hỗ trợ bạn sử dụng con lăn và cuộn con chuột liên tục để đọc thêm các nội dung mới.</li>
+<li>Google tiếp cận với Lazy loading theo hướng cụ thể là ở mục tìm kiếm hình ảnh. Google sẽ đưa ra danh sách 4-5 bức ảnh liên quan sau khi xem cụ thể một tấm hình nào đó và bên cạnh đó là nút “View More” để xem nhiều ảnh hơn.</li>
+</ul>
+<h3 id="113-cac-ky-thuat-co-ban"><strong>11.3 Các kỹ thuật cơ bản</strong><a class="headerlink" href="#113-cac-ky-thuat-co-ban" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Thêm thuộc tính loading với giá trị lazy:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;awesome-photo.jpg&quot;</span> <span class="na">loading</span><span class="o">=</span><span class="s">&quot;lazy&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<ul>
+<li>
+<p>Dưới đây là các giá trị được hỗ trợ cho thuộc loading:</p>
+<ul>
+<li><strong>auto</strong>: Giá trị mặc định phụ thuộc vào hành vi của từng trình duyệt, tương tự với việc không thêm thuộc tính loading vào.</li>
+<li><strong>lazy</strong>: Trì hoãn tải tài nguyên về cho đến khi đạt 1 khoảng cách nào đó từ khung nhìn.</li>
+<li><strong>eager</strong>: Tải tài nguyên ngay lập tức, bất kể vị trí của nó trên trang.</li>
+</ul>
+</li>
+<li>
+<p>Đối với các trình duyệt chưa hỗ trợ thì có thể tạo polyfill hoặc dùng thư viện bên thứ 3 như <a href="https://github.com/aFarkas/lazysizes">LazySizes</a></p>
+</li>
+<li>
+<h3 id="lazysizes"><a href="https://github.com/aFarkas/lazysizes">LazySizes</a><a class="headerlink" href="#lazysizes" title="Permanent link">&para;</a></h3>
+</li>
+<li>Là thư viện có tốc độ cao, tối ưu SEO và tự khởi tạo (self-initializing) cho mục đích lazy load ảnh (bao gồm cả ảnh đáp ứng picture / srcset), iframe, script / widget và nhiều thành phần khác nữa.</li>
+<li>Nó cũng ưu tiên các tài nguyên dựa trên sự khác biệt về tầm mức quan trọng, trong đó. LazySizes ưu tiên các phần tử nằm trong khung nhìn và gần khung nhìn trình duyệt (near view elements) để tối ưu tốc độ tải nhận thức (perceived performance) nhanh hơn.</li>
+</ul>
+<h2 id="12-mo-hinh-mvc"><strong>12. Mô hình MVC</strong><a class="headerlink" href="#12-mo-hinh-mvc" title="Permanent link">&para;</a></h2>
+<h2 id="13-mo-hinh-mvp"><strong>13. Mô hình MVP</strong><a class="headerlink" href="#13-mo-hinh-mvp" title="Permanent link">&para;</a></h2>
+<h2 id="14-mo-hinh-mvvm"><strong>14. Mô hình MVVM</strong><a class="headerlink" href="#14-mo-hinh-mvvm" title="Permanent link">&para;</a></h2>
+<h2 id="15-so-sanh-3-mo-hinh-mvc-mvp-mvvm"><strong>15. So sánh 3 mô hình MVC, MVP, MVVM</strong><a class="headerlink" href="#15-so-sanh-3-mo-hinh-mvc-mvp-mvvm" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Mô hình</th>
+<th>Mô tả</th>
+<th>Ưu điểm</th>
+<th>Nhược điểm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MVC</td>
+<td><code>Model-View-Controller (MVC)</code> chia thành ba thành phần chính: Model (dữ liệu), View (giao diện) và Controller (xử lý logic).</td>
+<td>- Phân chia rõ ràng giữa các thành phần, tạo sự tách biệt giữa dữ liệu, giao diện và logic.</td>
+<td>- Đôi khi Controller có thể trở nên phức tạp và quá mức phụ thuộc vào View và Model.</td>
+</tr>
+<tr>
+<td>MVP</td>
+<td><code>Model-View-Presenter (MVP)</code> cũng chia thành ba thành phần chính: Model (dữ liệu), View (giao diện) và Presenter (xử lý logic và trung gian giữa Model và View).</td>
+<td>- Giúp tách biệt logic xử lý và giao diện, dễ dàng kiểm thử đơn vị.</td>
+<td>- Có sự phụ thuộc mạnh mẽ giữa Presenter và View, có thể dẫn đến khó khăn khi thay đổi giao diện.</td>
+</tr>
+<tr>
+<td>MVVM</td>
+<td><code>Model-View-ViewModel (MVVM)</code> tách biệt hoàn toàn giữa giao diện (View) và logic (ViewModel) bằng cách sử dụng Data Binding. Model chịu trách nhiệm về dữ liệu và logic nghiệp vụ.</td>
+<td>- Data Binding giữa View và ViewModel giúp tự động cập nhật giao diện khi dữ liệu thay đổi.</td>
+<td>- Cần sử dụng thêm một số công cụ hoặc thư viện hỗ trợ Data Binding. Có thể dẫn đến hiệu suất chậm nếu không quản lý tốt quá trình binding.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="16-local-storage-session-storage-va-cookie"><strong>16. Local Storage, Session Storage và Cookie</strong><a class="headerlink" href="#16-local-storage-session-storage-va-cookie" title="Permanent link">&para;</a></h2>
+<h3 id="giong-nhau"><strong>Giống nhau</strong><a class="headerlink" href="#giong-nhau" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Đều lưu trữ dữ liệu trên trình duyệt web của người dùng.</li>
+<li>Hỗ trợ lưu trữ dữ liệu ở dạng key-value pairs.</li>
+<li>Có giới hạn dung lượng lưu trữ.</li>
+<li>Chỉ lưu trữ dữ liệu ở dạng chuỗi.</li>
+</ul>
+<h3 id="khac-nhau"><strong>Khác nhau</strong><a class="headerlink" href="#khac-nhau" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Local Storage</th>
+<th>Session Storage</th>
+<th>Cookie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phạm vi lưu trữ</td>
+<td>Có phạm vi toàn bộ trang web và có thể truy cập từ mọi nơi trên trang web.</td>
+<td>Chỉ có phạm vi trong một phiên làm việc (session) của trình duyệt và bị xóa khi phiên làm việc kết thúc</td>
+<td>Có thể có phạm vi toàn bộ trang web hoặc chỉ trong một tên miền cụ thể.</td>
+</tr>
+<tr>
+<td>Tương tác với máy chủ</td>
+<td>Dữ liệu trong cả hai cơ chế này không được gửi đến máy chủ trong mỗi yêu cầu HTTP. Chúng chỉ tồn tại trên trình duyệt của người dùng</td>
+<td>_</td>
+<td>Dữ liệu trong Cookie được gửi đến máy chủ trong mỗi yêu cầu HTTP thông qua header "Cookie". Điều này cho phép máy chủ lưu trữ và đọc dữ liệu từ Cookie.</td>
+</tr>
+<tr>
+<td>Kích thước lưu trữ</td>
+<td>Khoảng 5MB</td>
+<td>Chỉ vài MB</td>
+<td>Vài KB</td>
+</tr>
+<tr>
+<td>Thời gian sống</td>
+<td>Không có thời gian sống, nó sẽ tồn tại cho đến khi bị xóa bằng cách xóa bằng tay hoặc thông qua mã lệnh.</td>
+<td>Chỉ tồn tại trong một phiên làm việc (session) của trình duyệt</td>
+<td>Có thể có thời gian sống xác định, có thể được đặt để tồn tại trong một khoảng thời gian nhất định hoặc được xóa khi trình duyệt đóng.</td>
+</tr>
+<tr>
+<td>Sử dụng và mục đích sử dụng</td>
+<td>Thường được sử dụng để lưu trữ dữ liệu lâu dài, như cài đặt người dùng, lịch sử truy cập, thông tin cá nhân ...</td>
+<td>Thường được sử dụng để lưu trữ dữ liệu tạm thời trong phiên làm việc, như thông tin đăng nhập, giỏ hàng, trạng thái phiên làm việc ...</td>
+<td>Thường được sử dụng để lưu trữ thông tin nhận dạng người dùng, như thông tin đăng nhập, thông tin ngôn ngữ, thông tin giỏ hàng v.v. Cookie cũng có thể được sử dụng để theo dõi người dùng và cung cấp quảng cáo cá nhân hóa.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="17-khac-biet-giua-html-va-html5"><strong>17. Khác biệt giữa HTML và HTML5</strong><a class="headerlink" href="#17-khac-biet-giua-html-va-html5" title="Permanent link">&para;</a></h2>
+<p>HTML5 là phiên bản mới nhất của HTML và cung cấp nhiều tính năng mới như hỗ trợ multimedia, semantic elements, canvas, drag and drop, và offline storage.</p>
+<h2 id="18-mot-so-cach-tang-performance-website"><strong>18. Một số cách tăng Performance website</strong><a class="headerlink" href="#18-mot-so-cach-tang-performance-website" title="Permanent link">&para;</a></h2>
+<p>Để tối ưu hóa hiệu suất Front-end có thể sử dụng các kỹ thuật như:</p>
+<ul>
+<li>minification và compression của file CSS và JavaScript</li>
+<li>lazy loading, caching, sử dụng sprites hình ảnh, tối ưu hóa đường dẫn và kích thước hình ảnh, và loại bỏ các tài nguyên không cần thiết.</li>
+</ul>
+<h2 id="19-tieu-chuan-w3c"><strong>19. Tiêu chuẩn W3C</strong><a class="headerlink" href="#19-tieu-chuan-w3c" title="Permanent link">&para;</a></h2>
+<p>W3C viết tắt của cụm từ World Wide Web Consortium, W3C là chuẩn được các nhà thiết kế website sử dụng làm thước đo khi thiết kế website, cũng giống như lương của bạn được đo bằng giá trị của bạn mang lại cho công ty vậy.</p>
+<h3 id="loi-ich"><strong>Lợi ích</strong><a class="headerlink" href="#loi-ich" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Website của bạn sẽ thân thiện hơn với các Search Engine đặc biệt là google spider.</li>
+<li>Website của bạn được hỗ trợ tốt trên nhiều trình duyệt, bạn không mất nhiều thời gian để chỉnh sửa và tối ưu hóa cho từng trình duyệt.</li>
+<li>Các thiết bị hiển thị website di động như điện thoại IPad đều dựa trên chuẩn W3C. Do đó, Website của bạn sẽ hiển thị tốt hơn. Để kiểm tra website của bạn có tuân thủ theo chuẩn W3C hay chưa thì bạn có thể vào https://validator.w3.org/ để kiểm tra.</li>
+</ul>
+<h3 id="mot-so-luu-y"><strong>Một số lưu ý</strong><a class="headerlink" href="#mot-so-luu-y" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Thiếu thuộc tính alt trên thẻ img</li>
+<li>Đặt giá trị ID trùng nhau</li>
+<li>Sử dụng các ký tự đặc biệt</li>
+<li>Sử dụng sai thuộc tính href trên thẻ a</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;”link&quot;</span> <span class="na">1</span><span class="err">″</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;”_blank”&quot;</span><span class="p">&gt;</span> link 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+--&gt; <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;”link_1″&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;”_blank”&quot;</span><span class="p">&gt;</span> link 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li>Không phân biệt được inline element và block element</li>
+</ul>
+<h2 id="20-so-sanh-javascript-es5-va-es6"><strong>20. So sánh Javascript ES5 và ES6</strong><a class="headerlink" href="#20-so-sanh-javascript-es5-va-es6" title="Permanent link">&para;</a></h2>
+<h3 id="giong-nhau_1"><strong>Giống nhau</strong><a class="headerlink" href="#giong-nhau_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cả ES5 và ES6 đều là phiên bản của JavaScript và chạy trên các trình duyệt hiện đại.</li>
+<li>Cả hai phiên bản hỗ trợ việc xử lý các loại dữ liệu cơ bản, như chuỗi, số, mảng, đối tượng, hàm, và điều khiển luồng.</li>
+</ul>
+<h3 id="khac-nhau_1"><strong>Khác nhau</strong><a class="headerlink" href="#khac-nhau_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>ES5</th>
+<th>ES6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_</td>
+<td>Phát hành vào năm 2009</td>
+<td>Phát hành vào năm 2015</td>
+</tr>
+<tr>
+<td>OOP</td>
+<td>Không hỗ trợ lập trình hướng đối tượng</td>
+<td>Hỗ trợ lập trình hướng đối tượng</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Sử dụng từ khóa <code>var</code> để khai báo biến. Biến khai báo bằng var có phạm vi là hàm và không có phạm vi block.</td>
+<td>Hỗ trợ khai báo biến bằng <code>let</code> và <code>const</code></td>
+</tr>
+<tr>
+<td>Function</td>
+<td>Cú pháp hàm truyền thống với từ khóa function</td>
+<td>Arrow function (<code>=&gt;</code>): là một cú pháp rút gọn của function expression và thừa kế giá trị this từ phạm vi bên ngoài.</td>
+</tr>
+<tr>
+<td>Template literals</td>
+<td>Sử dụng chuỗi thông thường, hạn chế khả năng kết hợp với biểu thức JavaScript.</td>
+<td>Cho phép sử dụng template literals (<code>``</code>) để tạo ra chuỗi kết hợp với biểu thức JavaScript một cách dễ dàng và đọc được hơn.</td>
+</tr>
+<tr>
+<td>Destructuring</td>
+<td>_</td>
+<td>Là một cú pháp cho phép ta tách các phần tử của một mảng hoặc các thuộc tính của một đối tượng ra và gán chúng vào các biến riêng biệt</td>
+</tr>
+<tr>
+<td>Default parameters</td>
+<td>_</td>
+<td>Cho phép khai báo giá trị mặc định cho các tham số của hàm, giúp viết mã linh hoạt hơn.</td>
+</tr>
+<tr>
+<td>Rest parameters</td>
+<td>_</td>
+<td>Là một cú pháp cho phép ta truyền một danh sách các tham số vào một hàm dưới dạng một mảng</td>
+</tr>
+<tr>
+<td>Spread operator</td>
+<td>_</td>
+<td>Là một cú pháp cho phép ta truyền một mảng vào một hàm dưới dạng một danh sách các tham số.</td>
+</tr>
+<tr>
+<td>Classes</td>
+<td>Khai báo đối tượng thông qua hàm tạo.</td>
+<td>Hỗ trợ khai báo lớp thông qua từ khóa <code>class</code>, giúp lập trình viên dễ dàng xây dựng và quản lý các đối tượng. <br><code>class Person {</code><br>&emsp;&emsp;<code>constructor(name, age) {</code><br>&emsp;&emsp;&emsp;&emsp;<code>this.name = name;</code><br>&emsp;&emsp;&emsp;&emsp;<code>this.age = age;</code><br>&emsp;&emsp;<code>}</code><br><code>}</code></td>
+</tr>
+<tr>
+<td>Modules</td>
+<td>_</td>
+<td>Hỗ trợ cú pháp <code>import</code> và <code>export</code> để nhập và xuất các mô-đun JavaScript, giúp tạo ra cấu trúc mã mô-đun và tái sử dụng mã dễ dàng hơn.</td>
+</tr>
+<tr>
+<td>Promises</td>
+<td>_</td>
+<td>Đưa vào JavaScript khái niệm Promise để xử lý các tác vụ bất đồng bộ một cách gọn nhẹ và dễ sử dụng hơn.</td>
+</tr>
+<tr>
+<td>Iterators và Generators</td>
+<td>_</td>
+<td>Giúp lặp lại và xử lý các tập hợp dữ liệu một cách thuận tiện và linh hoạt.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="21-array-methods"><strong>21. Array Methods</strong><a class="headerlink" href="#21-array-methods" title="Permanent link">&para;</a></h2>
+<h3 id="foreach"><strong>forEach()</strong><a class="headerlink" href="#foreach" title="Permanent link">&para;</a></h3>
+<p>Duyệt qua từng phần tử trong mảng</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="every-bool"><strong>every() – bool</strong><a class="headerlink" href="#every-bool" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kiểm tra tất cả các phần tử trong mảng có thỏa mãn điều kiện hay không.</li>
+<li>Nếu <code>tất cả các phần tử</code> đều thỏa mãn điều kiện thì trả về <code>true</code>, ngược lại trả về <code>false</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">every</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isEven</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div>
+<h3 id="some-bool"><strong>some() - bool</strong><a class="headerlink" href="#some-bool" title="Permanent link">&para;</a></h3>
+<p>Ngược với <code>every()</code>, chỉ cần có 1 ptử đúng --&gt; true</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">isEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">some</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isEven</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div>
+<h3 id="find"><strong>find()</strong><a class="headerlink" href="#find" title="Permanent link">&para;</a></h3>
+<p>Trả về phần tử cần tìm <code>đầu tiên</code> trong mảng</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">find</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2</span>
+</code></pre></div>
+<h3 id="filter"><strong>filter()</strong><a class="headerlink" href="#filter" title="Permanent link">&para;</a></h3>
+<p>Trả về tất cả ptử cần tìm trong mảng</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// [2, 4]</span>
+</code></pre></div>
+<h3 id="map"><strong>map()</strong><a class="headerlink" href="#map" title="Permanent link">&para;</a></h3>
+<p>Có chức năng tương tự như <code>forEach()</code>, nhưng <code>map()</code> dùng chỉnh sửa các phần tử trong mảng</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// [2, 4, 6, 8, 10]</span>
+
+<span class="c1">// Ví dụ 2</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">courseHandler</span><span class="p">(</span><span class="nx">course</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">course</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="sb">` Khoa hoc: </span><span class="si">${</span><span class="nx">course</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">coin</span><span class="o">:</span><span class="w"> </span><span class="nx">course</span><span class="p">.</span><span class="nx">coin</span><span class="p">,</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">newCourse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">courses</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">courseHandler</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="reduce"><strong>reduce()</strong><a class="headerlink" href="#reduce" title="Permanent link">&para;</a></h3>
+<p>Dùng để tính tổng các phần tử trong mảng. Hoặc trả về các thông tin của mảng</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">coinHandler</span><span class="p">(</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">,</span><span class="w"> </span><span class="nx">currentIndex</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// accumulator: giá trị trả về của lần gọi trước</span>
+<span class="w">  </span><span class="c1">// currentValue: giá trị của phần tử hiện tại</span>
+<span class="w">  </span><span class="c1">// currentIndex: index của phần tử hiện tại</span>
+<span class="w">  </span><span class="c1">// array: mảng đang được duyệt</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">.</span><span class="nx">coin</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">totalCoin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">courses</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">coinHandler</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0 là giá trị khởi tạo cho accumulator</span>
+</code></pre></div>
+<p>Ví dụ:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1. Tính tổng</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">item</span><span class="p">;</span>
+<span class="p">},</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 0 là giá trị khởi tạo cho total</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// 15</span>
+
+<span class="c1">// 2. Trả về thông tin mảng</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">depthArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">],</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">]];</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">flatArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">depthArr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">flatOutput</span><span class="p">,</span><span class="w"> </span><span class="nx">depthItem</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">flatOuput</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">depthItem</span><span class="p">);</span>
+<span class="p">},</span><span class="w"> </span><span class="p">[]);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">flatArr</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</code></pre></div>
+<h3 id="concat"><strong>concat()</strong><a class="headerlink" href="#concat" title="Permanent link">&para;</a></h3>
+<p>Dùng để nối 2 mảng lại với nhau</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr1</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">arr2</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 3, 4, 5, 6]</span>
+</code></pre></div>
+<h3 id="slice"><strong>slice()</strong><a class="headerlink" href="#slice" title="Permanent link">&para;</a></h3>
+<p>Dùng để cắt mảng</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">animals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ant&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;bison&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;camel&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;duck&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;elephant&quot;</span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">animals</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// [&quot;camel&quot;, &quot;duck&quot;, &quot;elephant&quot;]</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">animals</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">));</span><span class="w"> </span><span class="c1">// [&quot;camel&quot;, &quot;duck&quot;]</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">animals</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// [&quot;bison&quot;, &quot;camel&quot;, &quot;duck&quot;, &quot;elephant&quot;]</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">animals</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// [&quot;duck&quot;, &quot;elephant&quot;]</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">animals</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">));</span><span class="w"> </span><span class="c1">// [&quot;camel&quot;, &quot;duck&quot;]</span>
+</code></pre></div>
+<h3 id="split"><strong>split()</strong><a class="headerlink" href="#split" title="Permanent link">&para;</a></h3>
+<p>Dùng để tách chuỗi thành mảng</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Have a good day!&quot;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">str</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;Have&quot;, &quot;a&quot;, &quot;good&quot;, &quot;day!&quot;]</span>
+</code></pre></div>
+<h3 id="join"><strong>join()</strong><a class="headerlink" href="#join" title="Permanent link">&para;</a></h3>
+<p>Dùng để nối các phần tử trong mảng thành chuỗi</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Have&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;good&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;day!&quot;</span><span class="p">];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Have a good day!&quot;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Vinh Trung THIEU
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/tvtrungg" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/tvtrungg" target="_blank" rel="noopener" title="LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+      
+    
+    
+    
+    <a href="https://tvtrung.vercel.app/" target="_blank" rel="noopener me" title="Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.5 102.5 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5m-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.tabs", "search.suggest", "search.full"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
